@@ -1,0 +1,270 @@
+:root {
+    --choco-dark: #4a2c2a;     
+    --choco-main: #7b3f27;     
+    --caramel: #b86b35;        
+    --cream-light: #faf5ee;    
+    --cream-card: #ffffff;     
+    --badge-bg: #f2e1cf;       
+    --text-dark: #2b1f1d;      
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    background-color: var(--cream-light);
+    color: var(--text-dark);
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.logo {
+    color: var(--choco-main) !important;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: #5c4a45;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--choco-main);
+}
+
+/* Tombol Utama */
+.btn-pink {
+    color: #ffffff;
+    background-color: var(--choco-main);
+    border: 1px solid var(--choco-main);
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: 0.3s ease;
+}
+
+.btn-pink:hover {
+    color: #ffffff;
+    background-color: var(--choco-dark);
+    border-color: var(--choco-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 44, 42, 0.25);
+}
+
+/* Tombol Outline */
+.btn-outline-pink {
+    color: var(--choco-main);
+    background: #ffffff;
+    border: 1px solid var(--choco-main);
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: 0.3s ease;
+}
+
+.btn-outline-pink:hover {
+    color: #ffffff;
+    background-color: var(--choco-main);
+    border-color: var(--choco-main);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #fdfbf7 0%, #f3e9dc 100%);
+}
+
+.hero h1 {
+    color: var(--choco-dark);
+    line-height: 1.15;
+}
+
+.hero h1 span,
+.section-title span {
+    color: var(--caramel);
+}
+
+.eyebrow {
+    color: var(--caramel);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero-img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border: 8px solid #ffffff;
+    border-radius: 45% 45% 20px 20px;
+    box-shadow: 0 15px 35px rgba(74, 44, 42, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.hero-img:hover {
+    transform: scale(1.03);
+}
+
+/* Judul Section */
+.section-title {
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+    font-weight: bold;
+    line-height: 1.25;
+    color: var(--choco-dark);
+}
+
+/* Filter Tombol */
+.filter-btn {
+    color: var(--choco-main);
+    background: #ffffff;
+    border: 1px solid #dfd1c3;
+    border-radius: 25px;
+    padding: 8px 18px;
+    transition: 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    color: #ffffff;
+    background-color: var(--choco-main);
+    border-color: var(--choco-main);
+}
+
+/* Kartu Produk */
+.product-card {
+    background-color: var(--cream-card);
+    overflow: hidden;
+    border: 1px solid #ebd9cb;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(74, 44, 42, 0.12);
+}
+
+.product-img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.product-card .card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--choco-dark);
+}
+
+.badge-pink {
+    color: var(--choco-dark);
+    background-color: var(--badge-bg);
+}
+
+.price {
+    color: var(--caramel);
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+/* Section Tentang Kami */
+.about-section {
+    background-color: #f5ece1;
+}
+
+.about-img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 20px 70px 20px 20px;
+    box-shadow: 0 10px 25px rgba(74, 44, 42, 0.1);
+}
+
+/* Banner Pemesanan */
+.order-banner {
+border-radius: 24px;
+    background-color: #ebd3be;
+    border: 1px solid #d4b59b;
+}
+
+/* Footer */
+.footer {
+    color: #f5ebe0;
+    background-color: var(--choco-dark);
+}
+
+.footer .logo {
+    color: #f7d5b8 !important;
+}
+
+.footer p {
+    color: #d8c3b7;
+}
+
+.footer hr {
+    border-color: #634340;
+}
+
+/* Modal Form */
+.modal-content {
+    overflow: hidden;
+    border: 0;
+    border-radius: 20px;
+    background-color: #fffdfa;
+}
+
+.modal-header {
+    background-color: #f5ebe0;
+    border-bottom: 1px solid #e7d7c8;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--choco-main);
+    box-shadow: 0 0 0 0.2rem rgba(123, 63, 39, 0.2);
+}
+
+/* Tampilan Responsif HP */
+@media (max-width: 767px) {
+    .hero-img {
+        height: 300px;
+        border-radius: 30px;
+    }
+
+    .product-img {
+        height: 150px;
+    }
+
+    .product-card .card-body {
+        padding: 12px;
+    }
+
+    .product-card .card-title {
+        font-size: 0.9rem;
+    }
+
+    .product-card .text-muted {
+        font-size: 0.75rem !important;
+    }
+
+    .about-img {
+        height: 280px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .product-img {
+        height: 120px;
+    }
+
+    .product-card .card-body {
+        padding: 8px;
+    }
+
+    .product-card .btn {
+        padding: 4px 10px;
+    }
+}

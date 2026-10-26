@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Treats | Dessert & Bakery</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold logo" href="#beranda">
+                 Sweet Treats
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuNavbar"
+                aria-controls="menuNavbar"
+                aria-expanded="false"
+                aria-label="Buka navigasi">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#beranda">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#produk">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tentang">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kontak">Kontak</a>
+                    </li>
+                </ul>
+                <a href="#produk" class="btn btn-pink ms-lg-3">
+                    Lihat Menu →
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero py-5" id="beranda">
+            <div class="container py-lg-5">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <p class="eyebrow">HOMEMADE WITH LOVE</p>
+
+                        <h1 class="display-4 fw-bold">
+                            Manisnya bikin<br>
+                            <span>hari lebih ceria.</span>
+                        </h1>
+
+                        <p class="text-muted mt-3">
+                            Temukan dessert dan bakery favoritmu,
+                            dibuat fresh dengan bahan berkualitas
+                            untuk menemani setiap momen spesial.
+                        </p>
+
+                        <div class="d-flex flex-wrap gap-3 mt-4">
+                            <a href="#produk" class="btn btn-pink btn-lg">
+                                Jelajahi Menu →
+                            </a>
+                            <a href="#tentang" class="btn btn-outline-pink btn-lg">
+                                Cerita Kami
+                            </a>
+                        </div>
+
+                        <p class="mt-4 small text-muted">
+                            Fresh setiap hari, dibuat dengan cinta.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <img src="images/cakie.jpeg" class="img-fluid hero-img" alt="Kue cokelat Sweet Treats">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Produk -->
+        <section class="py-5" id="produk">
+            <div class="container py-4">
+                <div class="text-center mb-4">
+                    <p class="eyebrow">OUR FAVORITES</p>
+                    <h2 class="section-title">
+                        Temukan <span>manis favoritmu</span>
+                    </h2>
+                    <p class="text-muted">
+                        Pilih camilan favorit untuk mempermanis harimu.
+                    </p>
+                </div>
+
+                <!-- Tombol Filter -->
+                <div class="d-flex justify-content-center flex-wrap gap-2 mb-4">
+                    <button class="btn filter-btn active" data-filter="all">
+                        Semua Menu
+                    </button>
+                    <button class="btn filter-btn" data-filter="cake">
+                        Cake
+                    </button>
+                    <button class="btn filter-btn" data-filter="pastry">
+                        Pastry
+                    </button>
+                    <button class="btn filter-btn" data-filter="cookies">
+                        Cookies
+                    </button>
+                    <button class="btn filter-btn" data-filter="pudding">
+                        Pudding
+                    </button>
+                </div>
+
+                <div class="row g-4" id="productList">
+                    <!-- Produk 1 -->
+                    <div class="col-6 col-lg-3 product-item" data-category="cake">
+                        <article class="card product-card h-100">
+                            <img
+                                src="images/cake.jpeg"
+                                class="card-img-top product-img"
+                                alt="Chocolate Cake">
+                            <div class="card-body">
+                                <span class="badge badge-pink mb-2">Best Seller</span>
+                                <h5 class="card-title">Chocolate Cake</h5>
+                                <p class="text-muted small">Lembut dan kaya cokelat.</p>
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <strong class="price">Rp45.000</strong>
+                                    <button class="btn btn-pink btn-sm order-btn"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#orderModal"
+                                        data-product="Chocolate Cake">+</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                     <!-- Produk 4 -->
+                    <div class="col-6 col-lg-3 product-item" data-category="cookies">
+                        <article class="card product-card h-100">
+                            <img
+                                src="images/cookier.jpeg"
+                                class="card-img-top product-img"
+                                alt="Cookies">
+                            <div class="card-body">
+                                <span class="badge badge-pink mb-2">Best Seller</span>
+                                <h5 class="card-title">Cookies Redvelvet</h5>
+                                <p class="text-muted small">Rasa redvelvet yang rich.</p>
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <strong class="price">Rp20.000</strong>
+                                    <button class="btn btn-pink btn-sm order-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#orderModal"
+                                        data-product="Cookies Redvelvet">+</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Produk 2 -->
+                    <div class="col-6 col-lg-3 product-item" data-category="pudding">
+                        <article class="card product-card h-100">
+                            <img
+                                src="images/caramel.jpeg"
+                                class="card-img-top product-img"
+                                alt="Butter Croissant">
+                            <div class="card-body">
+                                <span class="badge badge-pink mb-2">Best Seller</span>
+                                <h5 class="card-title">Pudding Caramel</h5>
+                                <p class="text-muted small">Lembut dan manis</p>
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <strong class="price">Rp16.000</strong>
+                                    <button class="btn btn-pink btn-sm order-btn"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#orderModal"
+                                        data-product="Pudding Caramel">+</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                     <div class="col-6 col-lg-3 product-item" data-category="pastry">
+                        <article class="card product-card h-100">
+                            <img
+                                src="images/croissant.jpeg"
+                                class="card-img-top product-img"
+                                alt="Butter Croissant">
+                            <div class="card-body">
+                                <span class="badge badge-pink mb-2">Favorit</span>
+                                <h5 class="card-title">Strawberry Croissant</h5>
+                                <p class="text-muted small">Renyah dan buttery.</p>
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <strong class="price">Rp19.000</strong>
+                                    <button class="btn btn-pink btn-sm order-btn"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#orderModal"
+                                        data-product="Croissant">+</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Produk 3 -->
+                    <div class="col-6 col-lg-3 product-item" data-category="cake">
+                        <article class="card product-card h-100">
+                            <img
+                                src="images/berry.jpeg"
+                                class="card-img-top product-img"
+                                alt="Berry Cream Cup">
+                            <div class="card-body">
+                                <span class="badge badge-pink mb-2">Favorit</span>
+                                <h5 class="card-title">Berry Cream Cup</h5>
+                                <p class="text-muted small">Creamy dengan buah berry.</p>
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <strong class="price">Rp28.000</strong>
+                                    <button class="btn btn-pink btn-sm order-btn"
+                                    data-bs-toggle="modal"
+                                        data-bs-target="#orderModal"
+                                        data-product="Berry Cream Cup">+</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Produk 4 -->
+                    <div class="col-6 col-lg-3 product-item" data-category="pastry">
+                        <article class="card product-card h-100">
+                            <img
+                                src="images/puff.jpeg"
+                                class="card-img-top product-img"
+                                alt="Pastry">
+                            <div class="card-body">
+                                <span class="badge badge-pink mb-2">Favorit</span>
+                                <h5 class="card-title">Classic Cream Puff  </h5>
+                                <p class="text-muted small">Rasa redvelvet yang rich.</p>
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <strong class="price">Rp25.000</strong>
+                                    <button class="btn btn-pink btn-sm order-btn"
+                                    data-bs-toggle="modal"
+                                      data-bs-target="#orderModal"
+                                        data-product="Cream Puff">+</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Produk 4 -->
+                    <div class="col-6 col-lg-3 product-item" data-category="pudding">
+                        <article class="card product-card h-100">
+                            <img
+                                src="images/puddingcok.jpeg"
+                                class="card-img-top product-img"
+                                alt="Pudding">
+                            <div class="card-body">
+                                <span class="badge badge-pink mb-2">Favorit</span>
+                                <h5 class="card-title">Pudding Chocolate</h5>
+                                <p class="text-muted small">Lembut dan kaya cokelat.</p>
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <strong class="price">Rp15.000</strong>
+                                    <button class="btn btn-pink btn-sm order-btn"
+                                    data-bs-toggle="modal"
+        data-bs-target="#orderModal"
+                                        data-product="Pudding Chocolate">+</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Produk 5 -->
+                    <div class="col-6 col-lg-3 product-item" data-category="cookies">
+                        <article class="card product-card h-100">
+                            <img
+                                src="images/cookies.jpeg"
+                                class="card-img-top product-img"
+                                alt="Choco Chip Cookies">
+                            <div class="card-body">
+                                <span class="badge badge-pink mb-2">Sweet Bites</span>
+                                <h5 class="card-title">Mix Cookies</h5>
+                                <p class="text-muted small">Cookies dengan berbagai varian</p>
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <strong class="price">Rp40.000</strong>
+                                    <button class="btn btn-pink btn-sm order-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#orderModal"
+                                    data-product="Mix Cookies">+</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tentang Kami -->
+        <section class="about-section py-5" id="tentang">
+            <div class="container py-4">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <img
+                            src="images/chef.jpeg"
+                            class="img-fluid about-img"
+                            alt="Proses menyiapkan bahan kue">
+                    </div>
+
+                    <div class="col-lg-6">
+                        <p class="eyebrow">A LITTLE ABOUT US</p>
+                        <h2 class="section-title">
+                            Dibuat dengan cinta,<br>
+                            <span>dinikmati bersama.</span>
+                        </h2>
+
+                        <p class="text-muted mt-3">
+                            Sweet Treats berawal dari kecintaan pada aroma
+                            kue yang baru keluar dari oven. Kami percaya,
+                            dessert sederhana bisa menjadi cara kecil
+                            untuk berbagi kebahagiaan.
+                        </p>
+
+                        <ul class="list-unstyled mt-4">
+                            <li class="mb-2">Bahan pilihan berkualitas</li>
+                            <li class="mb-2">Dibuat fresh setiap hari</li>
+                            <li class="mb-2">Cocok untuk momen spesial</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ajakan Memesan -->
+        <section class="py-5">
+            <div class="container">
+                <div class="order-banner p-4 p-lg-5 text-center">
+                    <p class="eyebrow">A LITTLE TREAT GOES A LONG WAY</p>
+                    <h2 class="section-title">
+                        Hari ini waktunya sesuatu yang <span>manis!</span>
+                    </h2>
+                    <p class="text-muted mt-3">
+                        Pilih dessert favoritmu dan buat harimu lebih ceria.
+                    </p>
+                    <button class="btn btn-pink btn-lg mt-2" data-bs-toggle="modal" data-bs-target="#orderModal">
+                        Pesan Sekarang →
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer py-4" id="kontak">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h4 class="logo">Sweet Treats</h4>
+                    <p class="small">
+                        Dessert kecil untuk kebahagiaan besar.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Hubungi Kami</h5>
+                    <p class="small mb-1">Nama: Nadia Salsabila Ibrahim</p>
+                    <p class="small mb-1">NIM: A12.2025.07310</p>
+                    <p class="small">Senin–Sabtu, 09.00–17.00</p>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center small mb-0">
+                © 2026 Nadia Sweet Treats Bakery
+            </p>
+        </div>
+    </footer>
+
+    <!-- Modal Bootstrap: Form Pemesanan -->
+    <div class="modal fade" id="orderModal" tabindex="-1"
+        aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <p class="eyebrow mb-1">LET'S MAKE IT SWEET</p>
+                        <h5 class="modal-title" id="orderModalLabel">
+                            Form Pemesanan
+                        </h5>
+                    </div>
+                    <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="Tutup"></button>
+                </div>
+
+                <div class="modal-body">
+                   
+<form id="orderForm">
+  <!-- Nama -->
+  <div class="mb-3">
+    <label for="nama" class="form-label">Nama Pemesan</label>
+    <input
+      type="text"
+      class="form-control"
+      id="nama"
+      name="nama"
+      placeholder="Masukkan nama kamu"
+      required
+    >
+  </div>
+
+  <!-- Pilihan tipe kue -->
+  <div class="mb-3">
+    <label for="tipeKue" class="form-label">Menu Kue</label>
+    <select class="form-select" id="tipeKue" name="tipeKue" required>
+      <option value="">Pilih kue</option>
+    </select>
+  </div>
+
+  <!-- Jumlah -->
+  <div class="mb-3">
+    <label for="jumlah" class="form-label">Jumlah Pesanan</label>
+    <input
+      type="number"
+      class="form-control"
+      id="jumlah"
+      name="jumlah"
+      min="1"
+      value="1"
+      required
+    >
+  </div>
+
+  <!-- Radio button -->
+  <div class="mb-3">
+    <label class="form-label d-block">Metode Pengambilan</label>
+
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="pengambilan"
+        id="ambilSendiri"
+        value="Ambil sendiri"
+        required
+      >
+      <label class="form-check-label" for="ambilSendiri">
+        Ambil sendiri
+      </label>
+    </div>
+
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="pengambilan"
+        id="diantar"
+        value="Diantar"
+      >
+      <label class="form-check-label" for="diantar">
+        Diantar
+      </label>
+    </div>
+  </div>
+
+  <!-- Textarea -->
+  <div class="mb-3">
+    <label for="catatan" class="form-label">Catatan Pesanan</label>
+    <textarea
+      class="form-control"
+      id="catatan"
+      name="catatan"
+      rows="3"
+      placeholder="Tulis catatan atau permintaan khusus..."
+    ></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-pink w-100">
+    Kirim Pesanan
+  </button>
+</form>
+
+<div id="pesanSukses" class="alert alert-success mt-3 d-none">
+  Pesanan berhasil dicatat!
+</div>
+
+
+                    <div id="orderResult" class="alert alert-success mt-3 d-none"
+                        role="status"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- JavaScript buatan sendiri -->
+    <script src="script.js"></script>
+</body>
+</html>
